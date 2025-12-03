@@ -1,0 +1,39 @@
+{
+  "name": "arc-lending",
+  "version": "1.0.0",
+  "description": "DeFi & Capital Markets Platform for Arc Network",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.js",
+    "deploy:pools": "hardhat run scripts/deployFXPools.js",
+    "deploy:update": "hardhat run scripts/deployAndUpdate.js",
+    "deploy:payment": "hardhat run scripts/deployPaymentRouter.js",
+    "register:pools": "hardhat run scripts/registerPools.js",
+    "rebalance": "hardhat run scripts/rebalancePools.js",
+    "get-admin": "hardhat run scripts/getAdminAddress.js",
+    "verify": "hardhat run scripts/verifyContracts.js",
+    "withdraw:liquidity": "hardhat run scripts/withdrawAllLiquidity.js",
+    "node": "hardhat node",
+    "clean": "bash scripts/clean.sh",
+    "clean:all": "bash scripts/clean.sh && rm -rf node_modules frontend/node_modules"
+  },
+  "keywords": [
+    "defi",
+    "lending",
+    "capital-markets",
+    "arc-network",
+    "stablecoin"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "dotenv": "^17.2.3",
+    "hardhat": "^2.19.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0"
+  }
+}
